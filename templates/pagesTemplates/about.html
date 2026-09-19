@@ -1,12 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>About Page from Pages App</h1>
-    <p>This is the about page content.</p>
-</body>
-</html>
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
+
+{% block title %}
+About Me
+{% endblock %}
+
+{% block content %}
+    <div class="about-page">
+        <h1>About Me</h1>
+
+        <p>
+            This is the about page content.
+        </p>
+
+        <p>
+            And this is what I am all about.
+        </p>
+    </div>
+{% endblock %}
