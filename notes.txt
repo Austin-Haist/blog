@@ -17,3 +17,7 @@ MacOS: python3 server.py
 WIN: .\venv\Scripts\activate
 
 python manage.py runserver
+
+python manage.py makemigrations
+
+manage.py migrate

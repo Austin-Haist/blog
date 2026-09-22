@@ -1,10 +1,11 @@
 from django.urls import path
-from .views import HomePageView, AboutPageView
+from .views import HomePageView, AboutPageView, contact_page
 
 urlpatterns = [
     path("home/", HomePageView.as_view(), name="home"),
     path("", HomePageView.as_view(), name="homeTwo"),
     path("about/", AboutPageView.as_view(), name="about"),
+    path("contact/", contact_page, name="contact"),
 ]
 
 # GET / -> HomePageView
