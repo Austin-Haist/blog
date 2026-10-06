@@ -5,14 +5,20 @@ from .views import (
     PostCreateView,
     PostUpdateView,
     PostDeleteView,
+    PostArchivedListView,
+    PostDraftListView,
+    PostView
 )
 
 urlpatterns = [
     path("list/", PostListView.as_view(), name="post_list"),
-    path('detail/<int:pk>/', PostDetailView.as_view(), name="post_detail"),
+    path("archived/", PostArchivedListView.as_view(), name="post_archived_list"),
+    path("drafts/", PostDraftListView.as_view(), name="post_drafts_list"),
+    path('detail/<int:pk>/', PostView.as_view(), name="post_detail"),
     path('new/', PostCreateView.as_view(), name="post_new"),
     path("edit/<int:pk>/", PostUpdateView.as_view(), name="post_edit"),
     path("delete/<int:pk>/", PostDeleteView.as_view(), name="post_delete"),
+
 ]
 
 # SELECT * FROM table WHERE id = '?'
